@@ -1,10 +1,13 @@
 import os
 
-restaurantes = ['Fome Maluca', 'Fome louca']
+restaurantes = [{'nome': 'Fome Maluca', 'categoria': 'amburgueria', 'Ativo': False},
+                {'nome': 'Fome Suprema', 'categoria': 'amburgueria', 'Ativo': True},
+                {'nome': 'Fome Louca', 'categoria': 'amburgueria', 'Ativo': False},
+                ]
 
 
 def exibir_nome_do_programa():
-    print('AiFome\n')
+    print('𝙎𝙖𝙗𝙤𝙧 𝙀𝙭𝙥𝙧𝙚𝙨𝙨\n')
 
 
 def exibir_opcoes():
@@ -48,7 +51,10 @@ def listar_restaurantes():
     exibir_subtitulo('Lista de restaurantes')
 
     for restaurante in restaurantes:
-        print(f'.{restaurante}')
+        nome_restaurante = restaurante['nome']
+        categoria = restaurante['categoria']
+        ativo = restaurante['Ativo']
+        print(f'- {nome_restaurante} | {categoria} | {ativo} ')
 
     voltar_ao_menu_principal()
 
@@ -60,10 +66,8 @@ def escolher_opcao():
 
         if opcao_escolhida == 1:
             cadastras_novo_restaurante()
-            # print('Cadastra restaurante')
         elif opcao_escolhida == 2:
             listar_restaurantes()
-            # print('Listar restaurantes')
         elif opcao_escolhida == 3:
             print('Ativar restaurante')
         elif opcao_escolhida == 4:
