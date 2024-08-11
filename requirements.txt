@@ -27,6 +27,7 @@ PySide6_Addons==6.7.2
 PySide6_Essentials==6.7.2
 python-apt==2.4.0+ubuntu3
 PyYAML==5.4.1
+requests==2.32.3
 repo==2
 requests==2.25.1
 sdkmanager==0.5.1
